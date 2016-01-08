@@ -1,12 +1,16 @@
 ActiveAdmin.register_page "Dashboard" do
 
-  #controller do
-  #  def index
-  #    skip_policy_scope
-  #    super
-  #  end      
-  #end
+  controller do
+    def index
+      skip_policy_scope
+      super
+    end      
+  end
 
+  #before_filter :only => [:index] do
+  #  skip_policy_scope
+  #end
+  
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
   content title: proc{ I18n.t("active_admin.dashboard") } do
