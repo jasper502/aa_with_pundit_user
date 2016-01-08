@@ -1,5 +1,15 @@
 ActiveAdmin.register Post do
 
+  before_filter :only => [:index] do
+      policy_scope(collection)
+      authorize collection
+  end
+  
+  
+  before_filter :except => [:index] do
+      authorize resource
+  end
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
