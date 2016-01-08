@@ -1,7 +1,12 @@
 class PostPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope
+      Post.all
     end
   end
+  
+  def index?
+    true
+  end
+  
 end

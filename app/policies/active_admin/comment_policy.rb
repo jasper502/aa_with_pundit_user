@@ -1,10 +1,8 @@
 module ActiveAdmin
-class PostPolicy < ApplicationPolicy
+class CommentPolicy < ApplicationPolicy
   class Scope < Scope
-  #class Scope < Struct.new(:user, :scope)
-
     def resolve
-      Post.all
+      scope
     end
   end
 

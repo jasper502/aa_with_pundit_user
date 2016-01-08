@@ -69,6 +69,8 @@ ActiveAdmin.setup do |config|
   # case when Pundit is unable to find suitable policy.
   # config.pundit_default_policy = "MyDefaultPunditPolicy"
 
+  config.authorization_adapter = ActiveAdmin::PunditAdapter
+
   # You can customize your CanCan Ability class name here.
   # config.cancan_ability_class = "Ability"
 

@@ -1,4 +1,3 @@
-module ActiveAdmin
 class UserPolicy < ApplicationPolicy
 
   def index?
@@ -12,6 +11,4 @@ class UserPolicy < ApplicationPolicy
   end
     
   
-end
-
 end
