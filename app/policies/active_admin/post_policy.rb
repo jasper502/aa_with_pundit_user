@@ -13,7 +13,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    false
   end
 
   
